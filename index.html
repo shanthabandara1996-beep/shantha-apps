@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shantha Apps - 🇱🇰</title>
+<style>
+*{box-sizing:border-box;font-family:Arial,sans-serif}
+body{margin:0;background:#0f172a;color:white;padding:16px}
+.top{text-align:center;padding:20px 0 10px}
+.top h1{margin:0;font-size:30px}
+.top p{color:#94a3b8;margin:6px 0 0}
+.grid{max-width:480px;margin:20px auto;display:grid;gap:14px}
+.card{background:white;color:#111;border-radius:20px;padding:16px;display:flex;gap:14px;align-items:center;text-decoration:none}
+.emoji{font-size:42px}
+.card h2{margin:0;font-size:19px}
+.card p{margin:4px 0 0;color:#666;font-size:13px}
+.trans{background:#f8fafc;border-radius:20px;padding:16px;color:#111}
+.trans h2{margin:0 0 10px}
+.trans textarea{width:100%;padding:12px;border-radius:12px;border:2px solid #ddd;font-size:15px}
+.trans button{width:100%;padding:13px;background:#0f766e;color:white;border:none;border-radius:12px;font-weight:bold;font-size:16px;margin-top:10px}
+#out{background:#e0f2fe;padding:12px;border-radius:12px;margin-top:10px;min-height:45px;font-weight:bold}
+</style>
+</head>
+<body>
+<div class="top"><h1>👋 Shantha Apps 🇱🇰</h1><p>ඔයාගේ ඔක්කොම Apps එකම තැනක!</p></div>
+<div class="grid">
+<div class="trans">
+<h2>🌐 Translate - Sinhala ↔ English</h2>
+<textarea id="txt" rows="3">Mama adarei Sri Lanka</textarea>
+<button onclick="translateMe()">Translate 🔄</button>
+<div id="out">Translation eka methana...</div>
+</div>
+<a class="card" href="https://shanthabandara1996-beep.github.io/photo-editor/"><div class="emoji">📸</div><div><h2>Photo Editor</h2><p>Photo Edit, Filter, Crop</p></div></a>
+<a class="card" href="https://shanthabandara1996-beep.github.io/sri-lanka-map/"><div class="emoji">🗺️</div><div><h2>Sri Lanka Map</h2><p>District 25ක්, Sigiriya, Ella</p></div></a>
+<a class="card" href="https://shanthabandara1996-beep.github.io/dessert/"><div class="emoji">🍰</div><div><h2>Dessert Shop</h2><p>Watalappan, Kiri Pani</p></div></a>
+</div>
+<p style="text-align:center;color:#64748b;font-size:12px">Made by Shantha ❤️ | Halpita</p>
+<script>
+let dict={"mama":"I","adarei":"love","sri":"Sri","lanka":"Lanka","oya":"you","kanna":"eat","gedara":"home","yanna":"go","enna":"come","hari":"ok","lassanai":"beautiful","hello":"ayubowan","love":"adarei","good":"hodai","friend":"yaluwa","today":"ada","tomorrow":"heta"};
+function translateMe(){let t=document.getElementById('txt').value.toLowerCase();let out=t.split(" ").map(w=>dict[w]||w).join(" ");document.getElementById('out').innerText=out;}
+</script>
+</body>
+</html>
